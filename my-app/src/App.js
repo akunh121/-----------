@@ -5,6 +5,8 @@ import LoginForm from "./components/LoginForm";
 // import About from './navbar';
 // import Login from './containers/Login'
 import userss from "./userss.json";
+import Footer from "./Footer";
+import ComplexGrid from "./ShopItem";
 
 import { Navbarr } from "./Navbarr";
 import { Home } from "./Home";
@@ -50,7 +52,7 @@ function App() {
         <Navbarr user={user} setuser={setuser} />
 
         <Routes>
-          <Route index path="/" element={<Home {...user} />} />
+          <Route index path="/" element={<ComplexGrid {...user} />} />
           <Route
             index
             path="LoginForm"
@@ -66,12 +68,13 @@ function App() {
             element={<Loggedout setuser={setuser} user={user} />}
           />
           <Route index path="/Cart" element={<Cart {...user} />} />
-          {/* <Route index path='/Services' element={<Services/>}/>
-        <Route index path='/Services/:name' element={<ServicesDetails/>}/> */}
-          {/* <Route index path='/' element={<Sa/>}/> */}
-          {/* <Route index path='*' element={<main>נתיב לא נמצא</main>}/>  */}
+           <Route index path="/cake" element={<ComplexGrid {...user} />} />
+        {/* <Route index path='/Services/:name' element={<ServicesDetails/>}/> }
+          <Route index path='/' element={<Sa/>}/> }
+           <Route index path='*' element={<main>נתיב לא נמצא</main>}/>  */} 
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

@@ -60,7 +60,7 @@ function LoginForm({ setuser,user }) {
      
       useEffect(() => {
         if(Try==true){
-          seterror('fddggdg')
+          seterror('פרטים שגויים')
         }
         return () => {
           if(Try==false){

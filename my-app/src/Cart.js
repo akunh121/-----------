@@ -7,6 +7,10 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from '@mui/material';
+import { useState } from 'react';
+import { QuantityPicker } from 'react-qty-picker';
+
 
 
 const Img = styled('img')({
@@ -17,6 +21,42 @@ const Img = styled('img')({
 });
 
 export default function Cart(user) {
+  function Quanityfun(num,key) {
+    let cart = JSON.parse(localStorage.getItem(user.id));
+    cart=cart.map((value)=>{
+      if(cart[key]==value){
+        console.log("aaa")
+        return{
+          ...value,
+          Quanity:num
+        }
+      }
+      return value
+    })
+    localStorage.setItem(user.id, JSON.stringify(cart));
+    setCartstate(cart)
+  }
+  const [Cartstate, setCartstate] = useState(JSON.parse(localStorage.getItem(user.id)))
+  function removeItem(productId) {
+    let cart = JSON.parse(localStorage.getItem(user.id));
+    alert("הוסר בהצלחה")
+    console.log(productId)
+   
+    // console.log(productId)
+
+    // console.log(productId)
+    // console.log(cart)
+
+    console.log(cart);
+    // let temp = cart.filter(item=>{console.log(item.id+productId)});
+    // console.log(temp)
+    let temp = cart.filter((item) => item.id != productId);
+    console.log(temp);
+    localStorage.setItem(user.id, JSON.stringify(temp));
+    setCartstate(temp)
+    console.log(Cartstate)
+    console.log(cart);
+  }
   const navigate = useNavigate();
   let cart = JSON.parse(localStorage.getItem(user.id));
   
@@ -65,8 +105,12 @@ export default function Cart(user) {
             </Grid>
             <Grid item>
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
+                <Button  onClick={() => removeItem(Data.id)}  name={key}>
                 Remove
+                </Button>
               </Typography>
+              <QuantityPicker value={Data.Quanity} min={1} onChange={(value)=>{ Quanityfun(value,key); 
+                   }} />
             </Grid>
           </Grid>
           <Grid item>

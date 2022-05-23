@@ -3,6 +3,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import LoginForm from './components/LoginForm'
 import { Link } from 'react-router-dom'
 // import SearchPage from './SearchPage'
+import SearchBar from './SearchBar'
 
 
 import React from 'react'
@@ -15,6 +16,7 @@ export const Navbarr = ({ user }) => {
   var retrievedPerson = JSON.parse(localStorage.getItem("user"))
   console.log(retrievedPerson);
   return (
+    <>
   
         
     <Navbar bg="danger" variant="dark" sticky='top' expand="lg" collapseOnSelect    > 
@@ -23,8 +25,10 @@ export const Navbarr = ({ user }) => {
 
         <Navbar.Brand >
           {user!=null&&<img src={user.picture} className='img' width="40px" height="40px"/>}
+          
             
         </Navbar.Brand>
+        <SearchBar/>
         <Navbar.Brand >
         {/* {user!=null&&<SearchPage user={user}/>} */}
     </Navbar.Brand>
@@ -39,7 +43,7 @@ export const Navbarr = ({ user }) => {
             <NavDropdown.Divider/>
             <NavDropdown.Item eventKey="10" as={Link} to='products/Birthday'style={{textAlign: 'right'}} >עוגות חלביות</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link eventKey="2" as={Link} to='products'>עוגיות</Nav.Link>
+          <Nav.Link eventKey="2" as={Link} to='cake'>עוגיות</Nav.Link>
           <Nav.Link eventKey="3" as={Link} to='products'>מאפים מתוקים</Nav.Link>
           <Nav.Link eventKey="4" as={Link} to='products'>מאפים מלוחים</Nav.Link>
           <Nav.Link eventKey="5" as={Link} to='products'>אודות</Nav.Link>
@@ -64,6 +68,6 @@ export const Navbarr = ({ user }) => {
         
     </Navbar>
     
-    
+    </>
   )
 }

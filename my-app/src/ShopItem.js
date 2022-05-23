@@ -8,10 +8,10 @@ import { stockData } from "./stockData";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
+import { Alert } from "@mui/material";
+import { AlertTitle } from "@mui/material";
 
-const submitHandler = (e) => {
-  console.log(e.target.name);
-};
+
 
 const Img = styled("img")({
   margin: "auto",
@@ -27,6 +27,7 @@ export default function ComplexGrid(user) {
   // let cart=JSON.parse(localStorage.getItem("cart"))
   function addItem(productId) {
     let cart = JSON.parse(localStorage.getItem(user.id));
+    alert("הוסף בהצלחה")
 
     let product = products.find(function (product) {
       return product.id == productId;
@@ -53,8 +54,10 @@ export default function ComplexGrid(user) {
     // }
     console.log(cart);
   }
-  function removeItem(productId) {
+   function removeItem(productId) {
     let cart = JSON.parse(localStorage.getItem(user.id));
+    alert("הוסר בהצלחה")
+   
     // console.log(productId)
 
     // console.log(productId)
@@ -115,7 +118,7 @@ export default function ComplexGrid(user) {
                   </Grid>
                   <Grid item>
                     <Typography sx={{ cursor: "pointer" }} variant="body2">
-                      <Button
+                    <Button
                       className="button-block mb-1"
                         variant="contained"
                         color="success"
@@ -126,7 +129,7 @@ export default function ComplexGrid(user) {
                         הוסף לסל
                       </Button>
                     </Typography>
-                    <Typography sx={{ cursor: "pointer" }} variant="body2" >
+                    {JSON.stringify(user) != JSON.stringify({})&&<Typography sx={{ cursor: "pointer" }} variant="body2" >
                       <Button
                       className="button-block"
                         variant="contained"
@@ -136,7 +139,9 @@ export default function ComplexGrid(user) {
                       >
                         הסר
                       </Button>
-                    </Typography>
+                      
+                    </Typography>}
+                    
                   </Grid>
                 </Grid>
                 <Grid item>

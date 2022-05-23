@@ -1,7 +1,7 @@
 export const stockData = [
   {
     id: "0",
-    type: "עוגת יום הולדת",
+    type: "עוגה",
     price: "47",
     stockPrice: "22.76 USD",
     timeElapsed: "5 sec ago",
