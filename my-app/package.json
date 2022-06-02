@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://{username}.github.io",
+  "homepage": "https://akunh121.github.io",
   "dependencies": {
     "@adobe/react-spectrum": "^3.17.0",
     "@emotion/react": "^11.9.0",
