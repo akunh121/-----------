@@ -64,5 +64,8 @@
     "css-loader": "^6.7.1",
     "gh-pages": "^4.0.0",
     "json-loader": "^0.5.7"
+  },
+  "resolutions": {
+    "react-scripts/postcss-preset-env/postcss-custom-properties": "^10.0.0"
   }
 }
