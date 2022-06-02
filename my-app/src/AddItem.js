@@ -50,7 +50,7 @@ export function AddItem(user) {
           <br />
             
           <select id="type">
-                <option value="5עוגיות">עוגיות</option>
+                <option value="עוגיות">עוגיות</option>
                 <option value="גלידה">גלידה</option>
                 <option value="עוגת יום הולדת">עוגת יום הולדת</option>
                 <option value="מאפים מלוחים">מאפים מלוחים</option>
