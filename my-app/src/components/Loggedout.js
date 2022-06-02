@@ -16,7 +16,6 @@ export const Loggedout = ({ setuser }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  
   const navigate = useNavigate();
   // window.onload = function() {
   //     if(!window.location.hash) {
@@ -25,6 +24,5 @@ export const Loggedout = ({ setuser }) => {
   //     }
   // }
 
-  
   return <div>loggedout</div>;
 };

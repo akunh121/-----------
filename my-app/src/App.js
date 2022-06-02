@@ -1,25 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import ReactDOM from "react-dom";
 import LoginForm from "./components/LoginForm";
+import './index.css';
 // import About from './navbar';
 // import Login from './containers/Login'
 import userss from "./userss.json";
-
+import Footer from "./Footer";
+import ComplexGrid from "./ShopItem";
+import  {AddItem}  from "./AddItem";
 import { Navbarr } from "./Navbarr";
-import { Home } from "./Home";
+// import { Home } from "./Home";
 import axios from "axios";
-import { Sa } from "./4545454";
+
 import { Loggedout } from "./components/Loggedout";
 import { stockData } from "./stockData";
-import  Cart  from "./Cart";
+import Cart from "./Cart";
 
 function App() {
   // const saved = localStorage.getItem("item");
   // const initial = JSON.parse(saved);
   // if(stockData==initial)
   if (!localStorage.getItem("products")) {
-  localStorage.setItem("products", JSON.stringify(stockData));}
+    localStorage.setItem("products", JSON.stringify(stockData));
+  }
   // let users=localStorage.getItem("user");
   if (!localStorage.getItem("cart")) {
     localStorage.setItem("cart", "[]");
@@ -29,6 +33,7 @@ function App() {
       localStorage.setItem(user.id, "[]");
     }
   });
+
   // users.forEach(user => {
   //   // if(!localStorage.getItem(user.id)){
   //   //   localStorage.setItem(user.id,"[]")
@@ -39,6 +44,9 @@ function App() {
 
   //                console.log(localStorage.getItem("user"))
   //   const Login=detalis=>{
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [user, setuser] = useState(null);
 
@@ -50,7 +58,13 @@ function App() {
         <Navbarr user={user} setuser={setuser} />
 
         <Routes>
-          <Route index path="/" element={<Home {...user} />} />
+          <Route
+            index
+            path="/"
+            element={
+              <ComplexGrid {...user} user={{ ...user }} keyWord={"הכול"} />
+            }
+          />
           <Route
             index
             path="LoginForm"
@@ -66,12 +80,23 @@ function App() {
             element={<Loggedout setuser={setuser} user={user} />}
           />
           <Route index path="/Cart" element={<Cart {...user} />} />
-          {/* <Route index path='/Services' element={<Services/>}/>
-        <Route index path='/Services/:name' element={<ServicesDetails/>}/> */}
-          {/* <Route index path='/' element={<Sa/>}/> */}
+          <Route
+            index
+            path="/SaltyPastries"
+            element={
+              <ComplexGrid user={{ ...user }} keyWord={"מאפים מלוחים"} />
+            }
+          />
+          <Route
+            index
+            path="/cookies"
+            element={<ComplexGrid user={{ ...user }} keyWord={"עוגיות"} />}
+          />
+          <Route index path="/AddItem" element={<div className="App"><AddItem {...user} /></div>} />
           {/* <Route index path='*' element={<main>נתיב לא נמצא</main>}/>  */}
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
