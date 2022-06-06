@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://akunh121.github.io",
   "dependencies": {
-    "@adobe/react-spectrum": "^3.17.0",
+    "@adobe/react-spectrum": "^3.18.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@material-ui/core": "^4.12.4",
@@ -63,7 +63,8 @@
   "devDependencies": {
     "css-loader": "^6.7.1",
     "gh-pages": "^4.0.0",
-    "json-loader": "^0.5.7"
+    "json-loader": "^0.5.7",
+    "postcss-values-parser": "^6.0.2"
   },
   "resolutions": {
     "react-scripts/postcss-preset-env/postcss-custom-properties": "^10.0.0"

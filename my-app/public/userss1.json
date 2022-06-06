@@ -11,7 +11,7 @@
     },
     {
         "id":"2",
-        "picture": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F613404411743881404%2F&psig=AOvVaw1SlvRzLynOQwFH-Lk5XKLb&ust=1650295602545000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjBrrC0m_cCFQAAAAAdAAAAABAJ",
+        "picture": "../img/Best-Profile-Pic-For-Boys (1).jpg",
         "age": 17,
         "name": "stav",
         "gender": "male",
@@ -21,7 +21,7 @@
     },
     {
         "id":"3",
-        "picture": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F613404411743881404%2F&psig=AOvVaw1SlvRzLynOQwFH-Lk5XKLb&ust=1650295602545000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjBrrC0m_cCFQAAAAAdAAAAABAJ",
+        "picture": "../img/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg",
         "age": 27,
         "name": "shlomi",
         "gender": "male",
@@ -31,7 +31,7 @@
     },
     {
         "id":"4",
-        "picture": "https://i.pinimg.com/736x/52/b8/87/52b887b046ef63ed6dde6b5c5b98af70.jpg",
+        "picture": "../img/sponge-bob-profile-picture-thypix-m.jpg",
         "age": 58,
         "name": "gabi",
         "gender": "male",
@@ -41,11 +41,11 @@
     },
     {
         "id":"5",
-        "picture": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F613404411743881404%2F&psig=AOvVaw1SlvRzLynOQwFH-Lk5XKLb&ust=1650295602545000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjBrrC0m_cCFQAAAAAdAAAAABAJ",
+        "picture": "../img/Whatsapp-DP-HALF-SIZE-Profile-81.webp",
         "age": 56,
         "name": "shoshi",
         "gender": "female",
         "email": "akunh10000@gmail.com",
-        "password":"user"
+        "password":"1234"
     }
   ]

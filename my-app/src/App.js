@@ -6,6 +6,7 @@ import './index.css';
 // import About from './navbar';
 // import Login from './containers/Login'
 import userss from "./userss.json";
+// import userss from "../public/userss.json";
 import Footer from "./Footer";
 import ComplexGrid from "./ShopItem";
 import  {AddItem}  from "./AddItem";
@@ -16,6 +17,7 @@ import axios from "axios";
 import { Loggedout } from "./components/Loggedout";
 import { stockData } from "./stockData";
 import Cart from "./Cart";
+import { Orders } from "./Orders";
 
 function App() {
   // const saved = localStorage.getItem("item");
@@ -94,6 +96,11 @@ function App() {
           />
           <Route index path="/AddItem" element={<div className="App"><AddItem {...user} /></div>} />
           {/* <Route index path='*' element={<main>נתיב לא נמצא</main>}/>  */}
+          <Route
+            index
+            path="orders"
+            element={<Orders {...user} />}
+          />
         </Routes>
       </BrowserRouter>
       <Footer />

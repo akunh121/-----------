@@ -21,7 +21,7 @@ function LoginForm({ setuser, user }) {
     const userPassword = e.target[1].value;
     console.log(userPassword);
     axios
-      .get("../userss.json")
+      .get("../userss1.json")
       .then((res) => {
         res.data.forEach((user) => {
           console.log(user);

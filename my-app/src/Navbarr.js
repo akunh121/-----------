@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { useEffect } from "react";
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import React from "react";
 
@@ -28,11 +30,12 @@ export const Navbarr = ({ user }) => {
   return (
     <>
       <Navbar
-        bg="danger"
+        // className="ms-3"
         variant="dark"
         sticky="top"
         expand="lg"
         collapseOnSelect
+       style={{background: "#ca7c8aab"}}
       >
         <Navbar.Brand>
           {user != null && (
@@ -45,21 +48,30 @@ export const Navbarr = ({ user }) => {
           )}
         </Navbar.Brand>
         <SearchBar />
-        <Navbar.Brand>
+        {/* <Navbar.Brand> */}
           {/* {user!=null&&<SearchPage user={user}/>} */}
-        </Navbar.Brand>
+        {/* </Navbar.Brand> */}
         <Navbar.Toggle />
         <Navbar.Collapse style={{ flexDirection: "column" }}>
           <Nav>
           {userlogged == "admin"&& (
-              <Nav.Link eventKey="12" as={Link} to="AddItem">
+              <Nav.Link eventKey="12" as={Link} to="AddItem"  style={{paddingRight: "3em",
+                marginRight: "1em"}} >
                 הוסף מוצר
               </Nav.Link>
             )}
-            <Nav.Link eventKey="1" as={Link} to="/">
+            {userlogged == "admin"&& (
+              <Nav.Link eventKey="12" as={Link} to="orders"  style={{paddingRight: "3em",
+                marginRight: "1em"}} >
+                הזמנות
+              </Nav.Link>
+            )}
+            <Nav.Link eventKey="1" as={Link} to="/"  style={{paddingRight: "3em",
+                marginRight: "1em"}}>
               בית
-            </Nav.Link>
-            <NavDropdown title="עוגות">
+            </Nav.Link >
+            <NavDropdown title="עוגות" style={{paddingRight: "3em",
+                marginRight: "1em"}} >
               <NavDropdown.Item
                 eventKey="8"
                 as={Link}
@@ -87,27 +99,33 @@ export const Navbarr = ({ user }) => {
                 עוגות חלביות
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link eventKey="2" as={Link} to="cookies">
+            <Nav.Link eventKey="2" as={Link} to="cookies"  style={{paddingRight: "3em",
+                marginRight: "1em"}}>
               עוגיות
             </Nav.Link>
-            <Nav.Link eventKey="3" as={Link} to="products">
+            <Nav.Link eventKey="3" as={Link} to="products" style={{paddingRight: "3em",
+                marginRight: "1em"}} >
               מאפים מתוקים
             </Nav.Link>
-            <Nav.Link eventKey="4" as={Link} to="SaltyPastries">
+            <Nav.Link eventKey="4" as={Link} to="SaltyPastries" style={{paddingRight: "3em",
+                marginRight: "1em"}} >
               מאפים מלוחים
             </Nav.Link>
-            <Nav.Link eventKey="5" as={Link} to="products">
+            <Nav.Link eventKey="5" as={Link} to="products" style={{paddingRight: "3em",
+                marginRight: "1em"}} >
               אודות
             </Nav.Link>
 
             {user == null && (
-              <Nav.Link eventKey="6" as={Link} to="LoginForm">
+              <Nav.Link eventKey="6" as={Link} to="LoginForm" style={{paddingRight: "3em",
+              marginRight: "1em"}} >
                 התחברות
               </Nav.Link>
             )}
 
             {user != null && (
-              <Nav.Link eventKey="7" as={Link} to="Loggedout">
+              <Nav.Link eventKey="7" as={Link} to="Loggedout" style={{paddingRight: "3em",
+              marginRight: "1em"}} >
                 התנתקות
               </Nav.Link>
             )}
@@ -115,13 +133,15 @@ export const Navbarr = ({ user }) => {
           <Nav.Link eventKey="11" as={Link} to='LoginForm'>התחברות</Nav.Link>
           </Navbar.Brand> */}
             {user != null && (
-              <Nav.Link eventKey="11" as={Link} to="Cart">
+              <Nav.Link eventKey="11" as={Link} to="Cart" style={{paddingRight: "3em",
+              marginRight: "1em"}} >
                 עגלה
               </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      
     </>
   );
 };

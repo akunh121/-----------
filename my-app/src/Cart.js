@@ -108,7 +108,7 @@ export default function Cart(user) {
                 {Data.type}
               </Typography> */}
                       <Typography variant="body2" color="text.secondary">
-                        ID: 1030114
+                        
                       </Typography>
                     </Grid>
                     <Grid item>

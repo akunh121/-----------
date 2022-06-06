@@ -3,55 +3,60 @@ export const stockData = [
     id: "0",
     type: "עוגיות",
     name:"שוקלד חלב",
-    price: "47",
+    price: "47₪",
+    Description:"ששש",
     
-    
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:'../img/cake-g89c97d886_1920.jpg',
     Quanity:"1"
   },
   {
     id: "1",
     type: "גלידה",
-    name:"שוקלד חלב",
-    price: "47",
+    name:"עוגת גבינה אפויה עם ציפוי שמנת חמוצה",
+    price: "47₪",
+    Description:"ששש",
    
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:"../img/WhatsApp Image 2022-06-04 at 15.29.36.jpeg",
     Quanity:"1"
   },
   {
     id: "2",
-    type: "עוגת יום הולדת",
-    name:"שוקלד חלב",
-    price: "47",
+    type: "עוגיות",
+    name:"שבקיות",
+    price: "47₪",
+    Description:"ששש",
     
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:"../img/WhatsApp Image 2022-06-04 at 15.30.00.jpeg",
     Quanity:"1"
   },
   {
     id: "3",
     type: "מאפים מלוחים",
-    name:"שוקלד חלב",
-    price: "47",
+    name:"טארט עם טופי ואגוזים",
+    price: "47₪",
+    Description:"ששש",
    
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:"../img/WhatsApp Image 2022-06-04 at 15.31.53.jpeg",
     Quanity:"1"
   },
   {
     id: "4",
     type: "מאפים מתוקים",
-    name:"שוקלד חלב",
-    price: "47",
+    name:"מיני מגנום-גלידת שמנת עם ציפוי שוקולד ואגוזי לוז מסוכרים",
+    price: "47₪",
+    Description:"ששש",
     
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:"../img/WhatsApp Image 2022-06-04 at 15.33.03.jpeg",
     Quanity:"1"
   },
   {
     id: "5",
     type: "עוגיות",
-    name:"שוקלד חלב",
-    price: "47",
+    name:"עוגת מספרים",
+    price: "47₪",
+    Description:"בצק פריך שקדים,קרם וניל מסקפונה בקישוטי פירות/שוקולדים",
    
-    picture:"https://bakeit-dorot.co.il/wp-content/uploads/2021/03/IMG_0411-867x1300.jpg",
+    picture:"../img/WhatsApp Image 2022-06-04 at 15.34.48.jpeg",
     Quanity:"1"
   },
 ];

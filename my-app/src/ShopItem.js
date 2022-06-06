@@ -118,13 +118,13 @@ export default function ComplexGrid(props) {
                           variant="subtitle1"
                           component="div"
                         >
-                          {Data.name}
+                          {/* {Data.name} */}
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                          Full resolution 1920x1080 • JPEG
+                        {Data.name}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          ID: 1030114
+                         
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -166,7 +166,7 @@ export default function ComplexGrid(props) {
                       <Typography
                         variant="subtitle1"
                         component="div"
-                        margin={4}
+                        margin={0}
                       >
                         {Data.price}
                       </Typography>
