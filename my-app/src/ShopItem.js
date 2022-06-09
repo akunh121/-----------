@@ -57,24 +57,24 @@ export default function ComplexGrid(props) {
     // }
     console.log(cart);
   }
-  function removeItem(productId) {
-    let cart = JSON.parse(localStorage.getItem(props.user.id));
-    alert("הוסר בהצלחה");
+  // function removeItem(productId) {
+  //   let cart = JSON.parse(localStorage.getItem(props.user.id));
+  //   alert("הוסר בהצלחה");
 
-    // console.log(productId)
+  //   // console.log(productId)
 
-    // console.log(productId)
-    // console.log(cart)
+  //   // console.log(productId)
+  //   // console.log(cart)
 
-    console.log(cart);
+  //   console.log(cart);
 
-    // let temp = cart.filter(item=>{console.log(item.id+productId)});
-    // console.log(temp)
-    let temp = cart.filter((item) => item.id != productId);
-    console.log(temp);
-    localStorage.setItem(props.user.id, JSON.stringify(temp));
-    console.log(cart);
-  }
+  //   // let temp = cart.filter(item=>{console.log(item.id+productId)});
+  //   // console.log(temp)
+  //   let temp = cart.filter((item) => item.id != productId);
+  //   console.log(temp);
+  //   localStorage.setItem(props.user.id, JSON.stringify(temp));
+  //   console.log(cart);
+  // }
   // console.log(keyWord)
   const navigate = useNavigate();
   function LoginForm() {
@@ -144,7 +144,7 @@ export default function ComplexGrid(props) {
                             הוסף לסל
                           </Button>
                         </Typography>
-                        {JSON.stringify(props.user) != JSON.stringify({}) && (
+                        {/* {JSON.stringify(props.user) != JSON.stringify({}) && (
                           <Typography
                             sx={{ cursor: "pointer" }}
                             variant="body2"
@@ -159,7 +159,7 @@ export default function ComplexGrid(props) {
                               הסר
                             </Button>
                           </Typography>
-                        )}
+                        )} */}
                       </Grid>
                     </Grid>
                     <Grid item>

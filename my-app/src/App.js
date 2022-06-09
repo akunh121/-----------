@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route,  } from "react-router-dom";
+
 import LoginForm from "./components/LoginForm";
 import './index.css';
 // import About from './navbar';
@@ -18,6 +18,7 @@ import { Loggedout } from "./components/Loggedout";
 import { stockData } from "./stockData";
 import Cart from "./Cart";
 import { Orders } from "./Orders";
+import { EditItem } from "./EditItem";
 
 function App() {
   // const saved = localStorage.getItem("item");
@@ -95,6 +96,7 @@ function App() {
             element={<ComplexGrid user={{ ...user }} keyWord={"עוגיות"} />}
           />
           <Route index path="/AddItem" element={<div className="App"><AddItem {...user} /></div>} />
+          <Route index path="/EditItem" element={<div className="App"><EditItem {...user} /></div>} />
           {/* <Route index path='*' element={<main>נתיב לא נמצא</main>}/>  */}
           <Route
             index

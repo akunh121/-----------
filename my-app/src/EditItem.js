@@ -3,13 +3,37 @@ import { useForm } from "react-hook-form";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Button from '@material-ui/core/Button';
 
 
 
 
-export function AddItem(user) {
-  const [Imagee, setImagee] = useState(null)
+
+export function EditItem(user) {
+    const CategoryChoosed = (e) => {
+        let Products = JSON.parse(localStorage.getItem("products"));
+        let temp=Products.find((product)=>e.target.value===product.name)
+        setProductname(temp.name)
+        setProductprice(temp.price)
+        setProductimage(temp.picture)
+        console.log(e.target.value)
+        console.log(temp)
+        // showProducts(e);
+    }
+    
+  
+  const [Product, setProduct] = useState(null)
+  const [price, setProductprice] = useState();
+  const [name, setProductname] = useState()
+  const [image, setProductimage] = useState()
+//   useEffect(() => {
+//     console.log(Product)
+  
+    
+    
+//   }, [Product])
+  
+  let Products = JSON.parse(localStorage.getItem("products"));
+//   const [productsList, setProductsList] = useState([]);
   
   const submitHandler = (e) => {
     e.preventDefault();
@@ -55,28 +79,26 @@ export function AddItem(user) {
         </div>
         <div className="form-group">
           <label htmlFor="email">שם המוצר</label>
-          <input type="name" name="name" id="name" />
+          <input type="name" name="name" id="name" onChange={(e) => setProductname(e.target.value)} value={name|| ''}/>
         </div>
         <div className="form-group">
           <label htmlFor="type" style={{    margin: "10px"}}>קטגוריה</label>
           <br />
             
-          <select id="type">
-                <option value="עוגיות">עוגיות</option>
-                <option value="גלידה">גלידה</option>
-                <option value="עוגת יום הולדת">עוגת יום הולדת</option>
-                <option value="מאפים מלוחים">מאפים מלוחים</option>
-                <option value="מאפים מתוקים">מאפים מתוקים</option>
+          <select id="type" style={{width: "200px"}} onChange={CategoryChoosed} >
+          <option defaultValue selected disabled hidden/> 
+          {Products.map((product,key) => {
+                    return <option value={product.name} key={key} style={{width: "200px"}} >{product.name}</option>})}
                
             </select>
         </div>
         <div className="form-group">
           <label htmlFor="price">מחיר המוצר</label>
-          <input type="price" name="price" id="price" />
+          <input type="price" name="price" id="price" onChange={(e) => setProductprice(e.target.value)} value={price|| ''}/>
         </div>
         <div className="form-group">
         <label htmlFor="image">הוספת תמונה</label>
-          <input type="image " name="image " id="image " />
+          <input type="image " name="image " id="image " onChange={(e) => setProductimage(e.target.value)} value={image|| ''}/>
  {/* <input  type="file" id="select-image" />*/}
   {/* <label htmlFor="select-image"></label> 
   <input

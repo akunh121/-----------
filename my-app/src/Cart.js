@@ -136,7 +136,7 @@ export default function Cart(user) {
             </Paper>
           ))}
         </div>
-      :<div><Img src="https://top-studio.co.il/wp-content/uploads/2022/01/%D7%A2%D7%92%D7%9C%D7%94-%D7%A8%D7%99%D7%A7%D7%94.png"  /></div>}
+      :<div><Img src="../img/עגלה-ריקה.png"  /></div>}
        
     </div>
   );
